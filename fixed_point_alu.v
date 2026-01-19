@@ -10,7 +10,8 @@ module fixed_point_alu (
     input wire [2:0] sel_in,
     output reg signed [`WIDTH-1:0] res_out,
     output reg gt_out,
-    output reg eq_out
+    output reg eq_out,
+    output reg lt_out
 );
 
     always @(*) begin
