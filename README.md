@@ -11,3 +11,5 @@ Diya and Manya: arithmetic core
 https://docs.google.com/document/d/1uVzWaWzMvw4bsibki6XVcQR-8T9valIK6xlX4UJYgoM/edit?usp=sharing
 
 WEEK 2:
+
+Vec_arithmetic_core: https://docs.google.com/document/d/1dDFCHSpwLyWrIHWCCjLuIE-hu6bTosQ32jZCQUy8Ygw/edit?usp=sharing
