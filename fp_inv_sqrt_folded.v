@@ -27,7 +27,7 @@
 `default_nettype none
 
 `include "types.vh"
-`include "fixed_point_arith.vh"
+
 
 module fp_inv_sqrt_folded(
     input wire clk_in,
@@ -39,7 +39,7 @@ module fp_inv_sqrt_folded(
     output reg valid_out,
     output reg ready_out
 );
-
+   `include "fixed_point_arith.vh"
     parameter MAX_NEWTON_ITER = 2;
 
     // --- Internal State Registers ---
