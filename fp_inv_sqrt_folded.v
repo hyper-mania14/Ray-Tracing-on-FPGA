@@ -29,6 +29,7 @@
 `include "types.vh"
 
 
+
 module fp_inv_sqrt_folded(
     input wire clk_in,
     input wire rst_in,
@@ -39,7 +40,7 @@ module fp_inv_sqrt_folded(
     output reg valid_out,
     output reg ready_out
 );
-   `include "fixed_point_arith.vh"
+`include "fixed_point_arith.vh"
     parameter MAX_NEWTON_ITER = 2;
 
     // --- Internal State Registers ---
@@ -70,7 +71,7 @@ module fp_inv_sqrt_folded(
     wire signed [5:0] final_shift;
     wire signed [`WIDTH-1:0] x_shifted;
 
-    assign final_shift = diff >>> 1;
+    assign final_shift = (diff + 1) >>> 1;
     assign x_shifted = (final_shift >= 0) ? (x << final_shift) : (x >>> -final_shift);
     assign res_out = x;
 
@@ -108,7 +109,7 @@ module fp_inv_sqrt_folded(
         else if (stage == 4) begin
             // TASK 2: Final Odd-Shift Correction Multiply
             // x_shifted * (1/√2)
-            mult1_a = x_shifted <<< 1;
+            mult1_a = x_shifted;
             mult1_b = `FP_INV_SQRT_TWO;
         end
     end
