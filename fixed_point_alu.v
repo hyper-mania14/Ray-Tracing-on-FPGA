@@ -1,6 +1,7 @@
 `timescale 1ns / 1ps
 `default_nettype none
-
+`define WIDTH `NUM_ALL_DIGITS
+`define DOUBLE_WIDTH (2*`WIDTH)
 `include "types.vh"
 `include "fixed_point_arith.vh"
 
