@@ -1,7 +1,8 @@
 `timescale 1ns / 1ps
 `ifndef FIXED_POINT_ARITH_VH
 `define FIXED_POINT_ARITH_VH
-
+`define WIDTH `NUM_ALL_DIGITS
+`define DOUBLE_WIDTH (2*`WIDTH)
 `include "types.vh"
 
 // ----BASIC OPERATIONS----
