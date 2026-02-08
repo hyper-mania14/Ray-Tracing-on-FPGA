@@ -455,10 +455,11 @@ endfunction
 // Example in testbench:
 //   vec3 = some_vector;
 //   $display("Vector: (%f, %f, %f)", 
-//            fp_to_real(vec3[3*W-1:2*W]),
-//            fp_to_real(vec3[2*W-1:W]),
-//            fp_to_real(vec3[W-1:0]));
+//     fp_to_real(vec3[3*W-1:2*W]),
+//     fp_to_real(vec3[2*W-1:W]),
+//     fp_to_real(vec3[W-1:0]));
 
 `endif
 
 `default_nettype wire
+
