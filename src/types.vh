@@ -97,6 +97,20 @@
 `define FP_INV_SQRT_TWO    (32'sh000b504f >>> (20 - `NUM_FRAC_DIGITS))
 `define FP_THIRD           (32'sh00055555 >>> (20 - `NUM_FRAC_DIGITS))
 `define FP_QUARTER         (32'sh00040000 >>> (20 - `NUM_FRAC_DIGITS))
+
+// sdfquert constants
+`define FP_THREE           (32'sh00300000 >>> (20 - `NUM_FRAC_DIGITS))
+`define FP_NINE            (32'sh00900000 >>> (20 - `NUM_FRAC_DIGITS))
+`define FP_NINTH           (32'sh0001c71c >>> (20 - `NUM_FRAC_DIGITS))
+`define FP_TWENTY_SEVEN    (32'sh01b00000 >>> (20 - `NUM_FRAC_DIGITS))
+`define FP_TWENTY_SEVENTH  (32'sh000097b4 >>> (20 - `NUM_FRAC_DIGITS))
+`define FP_EIGHTY_ONE      (32'sh05100000 >>> (20 - `NUM_FRAC_DIGITS))
+`define FP_EIGHTY_ONETH    (32'sh00003291 >>> (20 - `NUM_FRAC_DIGITS))
+`define FP_MAGIC_NUMBER_A  (32'sh000a6666 >>> (20 - `NUM_FRAC_DIGITS)) 
+`define FP_MAGIC_NUMBER_B  (32'sh0001999a >>> (20 - `NUM_FRAC_DIGITS)) 
+`define FP_MAGIC_NUMBER_C  (32'sh0000d99a >>> (20 - `NUM_FRAC_DIGITS)) 
+`define FP_MAGIC_NUMBER_D  (32'sh0000cccd >>> (20 - `NUM_FRAC_DIGITS)) 
+`define FP_ONE_SIXTEENTHS  (32'sh00010000 >>> (20 - `NUM_FRAC_DIGITS))
 `endif
 
 `default_nettype wire
