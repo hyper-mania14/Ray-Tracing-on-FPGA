@@ -93,7 +93,10 @@
 `define FP_SQRT_TWO        (32'sh0016a09e >>> (20 - `NUM_FRAC_DIGITS))
 `define FP_HUNDREDTH       (32'sh000028f5 >>> (20 - `NUM_FRAC_DIGITS))
 `define FP_INTERP_SLOPE    (32'sh000d413c >>> (20 - `NUM_FRAC_DIGITS))
-
+`define FP_THREE_HALFS     (32'sh00180000 >>> (20 - `NUM_FRAC_DIGITS))
+`define FP_INV_SQRT_TWO    (32'sh000b504f >>> (20 - `NUM_FRAC_DIGITS))
+`define FP_THIRD           (32'sh00055555 >>> (20 - `NUM_FRAC_DIGITS))
+`define FP_QUARTER         (32'sh00040000 >>> (20 - `NUM_FRAC_DIGITS))
 `endif
 
 `default_nettype wire
