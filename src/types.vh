@@ -111,6 +111,8 @@
 `define FP_MAGIC_NUMBER_C  (32'sh0000d99a >>> (20 - `NUM_FRAC_DIGITS)) 
 `define FP_MAGIC_NUMBER_D  (32'sh0000cccd >>> (20 - `NUM_FRAC_DIGITS)) 
 `define FP_ONE_SIXTEENTHS  (32'sh00010000 >>> (20 - `NUM_FRAC_DIGITS))
+`define FP_TENTH           (32'sh0001999a >>> (20 - `NUM_FRAC_DIGITS))
+`define FP_FIVE            (32'sh00500000 >>> (20 - `NUM_FRAC_DIGITS))
 `endif
 
 `default_nettype wire
