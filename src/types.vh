@@ -19,6 +19,10 @@
 `define NUM_FRAC_DIGITS   16
 `define NUM_ALL_DIGITS    (`NUM_WHOLE_DIGITS + `NUM_FRAC_DIGITS)
 
+`define FP_THREE_HALFS     (32'sh00180000 >>> (20 - `NUM_FRAC_DIGITS))
+`define FP_INV_SQRT_TWO    (32'sh000b504f >>> (20 - `NUM_FRAC_DIGITS))
+
+
 `define ADDR_BITS         (`H_BITS + `V_BITS)
 `define COLOR_BITS        4
 

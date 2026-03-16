@@ -28,7 +28,8 @@
 
 `include "types.vh"
 
-
+`define WIDTH `NUM_ALL_DIGITS
+`define DOUBLE_WIDTH (2*`WIDTH)
 
 module fp_inv_sqrt_folded(
     input wire clk_in,
@@ -40,7 +41,7 @@ module fp_inv_sqrt_folded(
     output reg valid_out,
     output reg ready_out
 );
-`include "fixed_point_arith.vh"
+
     parameter MAX_NEWTON_ITER = 2;
 
     // --- Internal State Registers ---
@@ -187,3 +188,4 @@ module fp_inv_sqrt_folded(
     end
 
 endmodule
+

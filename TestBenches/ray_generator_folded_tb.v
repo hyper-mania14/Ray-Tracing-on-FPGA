@@ -53,10 +53,12 @@ module ray_generator_folded_tb;
       $display("Ray direction: (%f, %f, %f)", rd_x, rd_y, rd_z);
       $display("Length squared: %f  (expected ~1.0)", length_sq);
       // A normalized vector should have |len²-1| < 0.05
-      if ($abs(length_sq - 1.0) < 0.05)
-        $display("NORMALIZED CHECK: PASSED");
+      
+      
+      if ( ((length_sq-1.0) < 0 ? -(length_sq-1.0) : (length_sq-1.0)) < 0.05 )
+            $display("NORMALIZED CHECK: PASSED");
       else
-        $display("NORMALIZED CHECK: FAILED");
+            $display("NORMALIZED CHECK: FAILED");
     end
   end
 

@@ -223,10 +223,29 @@ function signed [`WIDTH-1:0] fp_from_real;
     end
 endfunction
 // Simulation only - convert fixed point to real
+`ifndef SYNTHESIS
 function real fp_to_real;
     input signed [`WIDTH-1:0] a;
     begin
         fp_to_real = $itor(a) / $itor(1 << `NUM_FRAC_DIGITS);
+    end
+endfunction
+`endif
+
+function signed [5:0] fp_count_leading_zeros;
+    input signed [`WIDTH-1:0] value;
+    integer i;
+    reg found;
+    begin
+        fp_count_leading_zeros = 0;
+        found = 0;
+        for (i = `WIDTH-1; i >= 0; i = i - 1) begin
+            if (!found && value[i] == 0) begin
+                fp_count_leading_zeros = fp_count_leading_zeros + 1;
+            end else begin
+                found = 1;
+            end
+        end
     end
 endfunction
 

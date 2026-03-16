@@ -440,8 +440,8 @@ function automatic [3*`W-1:0] vec3_from_reals;
     input real a;
     input real b;
     input real c;
+     reg[`W-1:0]a_fp, b_fp, c_fp;
     begin
-        reg[`W-1:0]a_fp, b_fp, c_fp;
         a_fp = fp_from_real(a);
         b_fp = fp_from_real(b);
         c_fp = fp_from_real(c);
