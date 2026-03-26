@@ -1,0 +1,301 @@
+$date
+	Tue Mar 10 12:37:06 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module sdf_primitives_tb $end
+$var reg 1 ! all_passed $end
+$var reg 1 " passed $end
+$var reg 22 # val [21:0] $end
+$var reg 66 $ vec [65:0] $end
+$scope function fp_abs $end
+$var reg 22 % a [21:0] $end
+$upscope $end
+$scope function fp_add $end
+$var reg 22 & a [21:0] $end
+$var reg 22 ' b [21:0] $end
+$upscope $end
+$scope function fp_apply_sign $end
+$var reg 22 ( a [21:0] $end
+$var reg 22 ) b [21:0] $end
+$upscope $end
+$scope function fp_count_leading_zeros $end
+$var reg 22 * a [21:0] $end
+$var reg 1 + found $end
+$var integer 32 , i [31:0] $end
+$upscope $end
+$scope function fp_floor $end
+$var reg 22 - a [21:0] $end
+$var reg 22 . out [21:0] $end
+$upscope $end
+$scope function fp_fract $end
+$var reg 22 / a [21:0] $end
+$upscope $end
+$scope function fp_from_real $end
+$var real 1 0 val $end
+$upscope $end
+$scope function fp_gt $end
+$var reg 22 1 a [21:0] $end
+$var reg 22 2 b [21:0] $end
+$upscope $end
+$scope function fp_inv_sqrt $end
+$var reg 22 3 a [21:0] $end
+$var real 1 4 r_a $end
+$var real 1 5 r_inv $end
+$upscope $end
+$scope function fp_lt $end
+$var reg 22 6 a [21:0] $end
+$var reg 22 7 b [21:0] $end
+$upscope $end
+$scope function fp_max $end
+$var reg 22 8 a [21:0] $end
+$var reg 22 9 b [21:0] $end
+$upscope $end
+$scope function fp_min $end
+$var reg 22 : a [21:0] $end
+$var reg 22 ; b [21:0] $end
+$upscope $end
+$scope function fp_mod $end
+$var reg 22 < a [21:0] $end
+$var reg 22 = b [21:0] $end
+$var reg 44 > div [43:0] $end
+$var reg 22 ? quotient [21:0] $end
+$upscope $end
+$scope function fp_mul $end
+$var reg 22 @ a [21:0] $end
+$var reg 22 A b [21:0] $end
+$var reg 44 B temp_result [43:0] $end
+$upscope $end
+$scope function fp_mul_2 $end
+$var reg 22 C a [21:0] $end
+$upscope $end
+$scope function fp_mul_3 $end
+$var reg 22 D a [21:0] $end
+$upscope $end
+$scope function fp_mul_4 $end
+$var reg 22 E a [21:0] $end
+$upscope $end
+$scope function fp_mul_5 $end
+$var reg 22 F a [21:0] $end
+$upscope $end
+$scope function fp_mul_6 $end
+$var reg 22 G a [21:0] $end
+$upscope $end
+$scope function fp_mul_7 $end
+$var reg 22 H a [21:0] $end
+$upscope $end
+$scope function fp_mul_8 $end
+$var reg 22 I a [21:0] $end
+$upscope $end
+$scope function fp_mul_half $end
+$var reg 22 J a [21:0] $end
+$upscope $end
+$scope function fp_neg $end
+$var reg 22 K a [21:0] $end
+$upscope $end
+$scope function fp_sign $end
+$var reg 22 L a [21:0] $end
+$upscope $end
+$scope function fp_sub $end
+$var reg 22 M a [21:0] $end
+$var reg 22 N b [21:0] $end
+$upscope $end
+$scope function fp_to_real $end
+$var reg 22 O a [21:0] $end
+$upscope $end
+$scope function make_vec3 $end
+$upscope $end
+$scope function sd_box_fast $end
+$var reg 22 P halfExtents [21:0] $end
+$var reg 66 Q point [65:0] $end
+$var reg 22 R px [21:0] $end
+$var reg 22 S py [21:0] $end
+$var reg 22 T pz [21:0] $end
+$var reg 22 U x_abs [21:0] $end
+$var reg 22 V xy_max [21:0] $end
+$var reg 22 W xyz_max [21:0] $end
+$var reg 22 X y_abs [21:0] $end
+$var reg 22 Y z_abs [21:0] $end
+$upscope $end
+$scope function vec3_abs $end
+$upscope $end
+$scope function vec3_add $end
+$upscope $end
+$scope function vec3_apply_sign $end
+$upscope $end
+$scope function vec3_cross $end
+$upscope $end
+$scope function vec3_dot $end
+$upscope $end
+$scope function vec3_floor $end
+$upscope $end
+$scope function vec3_fract $end
+$upscope $end
+$scope function vec3_from_reals $end
+$scope begin $unm_blk_52 $end
+$upscope $end
+$upscope $end
+$scope function vec3_max $end
+$upscope $end
+$scope function vec3_min $end
+$upscope $end
+$scope function vec3_modded $end
+$upscope $end
+$scope function vec3_neg $end
+$upscope $end
+$scope function vec3_normed $end
+$upscope $end
+$scope function vec3_scaled $end
+$upscope $end
+$scope function vec3_scaled_2 $end
+$upscope $end
+$scope function vec3_scaled_3 $end
+$upscope $end
+$scope function vec3_scaled_half $end
+$upscope $end
+$scope function vec3_sign $end
+$upscope $end
+$scope function vec3_sl $end
+$upscope $end
+$scope function vec3_sr $end
+$upscope $end
+$scope function vec3_step $end
+$upscope $end
+$scope function vec3_sub $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 Y
+b0 X
+b0 W
+b0 V
+b0 U
+b0 T
+b0 S
+b0 R
+b0 Q
+b1000000000000000 P
+b1111111000000000000000 O
+b1000000000000000 N
+b0 M
+bx L
+bx K
+bx J
+bx I
+bx H
+bx G
+bx F
+bx E
+bx D
+bx C
+bx B
+bx A
+bx @
+bx ?
+bx >
+bx =
+bx <
+bx ;
+bx :
+b0 9
+b0 8
+bx 7
+bx 6
+r0 5
+r0 4
+bx 3
+bx 2
+bx 1
+r0.5 0
+bx /
+bx .
+bx -
+bx ,
+x+
+bx *
+bx )
+bx (
+bx '
+bx &
+b0 %
+b0 $
+b1111111000000000000000 #
+1"
+1!
+$end
+#10000
+b0 O
+b0 #
+b1000000000000000 M
+b1000000000000000 W
+b1000000000000000 8
+b1000000000000000 V
+b0 9
+b1000000000000000 X
+b0 %
+b1000000000000000 S
+b10000000000000000000000000000000000000 Q
+b10000000000000000000000000000000000000 $
+r0.5 0
+#20000
+b1000000000000000 O
+b1000000000000000 #
+b10000000000000000 M
+b10000000000000000 W
+b10000000000000000 9
+b0 V
+b0 8
+b10000000000000000 Y
+b10000000000000000 %
+b0 X
+b10000000000000000 T
+b0 S
+b10000000000000000 Q
+b10000000000000000 $
+r0.5 0
+#30000
+b1111111100110011001101 O
+b1111111100110011001101 #
+b100110011001101 M
+b100110011001101 W
+b100110011001101 V
+b100110011001101 8
+b1100110011010 9
+b1100110011010 Y
+b11001100110011 X
+b100110011001101 U
+b1100110011010 %
+b1100110011010 T
+b11001100110011 S
+b100110011001101 R
+b10011001100110100000000110011001100110000000001100110011010 Q
+b10011001100110100000000110011001100110000000001100110011010 $
+r0.5 0
+#40000
+b10000000000000000 O
+b10000000000000000 #
+b11000000000000000 M
+b11000000000000000 W
+b11001100110011 9
+b11000000000000000 V
+b11000000000000000 8
+b11001100110011 Y
+b1100110011010 X
+b11000000000000000 U
+b11001100110011 %
+b11001100110011 T
+b1111111110011001100110 S
+b11000000000000000 R
+b1100000000000000011111111100110011001100000000011001100110011 Q
+b1100000000000000011111111100110011001100000000011001100110011 $
+r0.5 0
+#50000
