@@ -42,6 +42,7 @@ module bram_manager_tb;
   always #5 clk = ~clk;
 
   integer i;
+  reg [WIDTH-1:0] tmp_data;
 
   initial begin
     $dumpfile("bram_manager.vcd");
@@ -99,7 +100,8 @@ module bram_manager_tb;
       write_addr   = i[ADDR_LEN-1:0];
       read_addr    = i[ADDR_LEN-1:0];
       write_enable = 1;
-      write_data   = (i + 7)[WIDTH-1:0];
+      tmp_data     = (i + 7);           // fixed: assign expression to reg first
+      write_data   = tmp_data;
       swap_buffers = (i % 7 == 0) ? 1 : 0;
       @(posedge clk);
       $display("[%2d] swap=%b which_bram=%b read_data=0x%h",

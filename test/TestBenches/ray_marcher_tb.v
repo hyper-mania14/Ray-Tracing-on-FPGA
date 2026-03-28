@@ -2,16 +2,17 @@
 `default_nettype none
 `define W `NUM_ALL_DIGITS
 
+`include "types.vh"
 module ray_marcher_tb;
 
-`include "types.vh"
+`include "fixed_point_arith.vh"
 `include "vector_arith.vh"
 
 
 
-  parameter H_BITS    = 4;
-  parameter V_BITS    = 3;
-  parameter NUM_CORES = 2;
+  parameter H_BITS    = 9;
+  parameter V_BITS    = 9;
+  parameter NUM_CORES = 16;
 
   reg clk_in, rst_in;
   reg [3*`W-1:0] pos_vec_in;
@@ -28,8 +29,8 @@ module ray_marcher_tb;
   wire              new_frame_out;
 
   ray_marcher #(
-    .DISPLAY_WIDTH (5),
-    .DISPLAY_HEIGHT(3),
+    .DISPLAY_WIDTH (400),
+    .DISPLAY_HEIGHT(300),
     .H_BITS        (H_BITS),
     .V_BITS        (V_BITS),
     .COLOR_BITS    (4),
@@ -59,6 +60,7 @@ module ray_marcher_tb;
     if (valid_out) begin
       $fdisplay(fd, "PIXEL OUT: hcount=%0d vcount=%0d color=%0d (CYCLE %0d)", hcount_out, vcount_out, color_out, $time);
       $display("PIXEL OUT: hcount=%0d vcount=%0d color=%0d", hcount_out, vcount_out, color_out);
+      $fflush(fd);
     end
     if (new_frame_out) begin
       $fdisplay(fd, "*** NEW FRAME *** (CYCLE %0d)", $time);
@@ -67,7 +69,7 @@ module ray_marcher_tb;
   end
 
   initial begin
-    fd = $fopen("sim_out/ray_marcher_output.txt", "w");
+    fd = $fopen("ray_marcher_output.txt", "w");
     if (!fd) $display("Warning: Could not open output file");
 
     $dumpfile("ray_marcher.vcd");
@@ -92,8 +94,13 @@ module ray_marcher_tb;
     rst_in = 0;
     #10;
 
-    // Wait for the frame to finish
-    @(posedge new_frame_out);
+    begin : render_loop
+      // Run ONLY fractal 2 (Basic Cube) which takes the fewest simulation clock cycles
+      fractal_sel_in = 2;
+      @(posedge new_frame_out);
+      $display("Started simulating fractal 2 (Fastest)...");
+      @(posedge new_frame_out); // Wait for the single frame to finish computation
+    end
     #100;
 
     $display("Finishing Sim");

@@ -2,10 +2,11 @@
 `default_nettype none
 `define W `NUM_ALL_DIGITS
 
+`include "types.vh"
 module ray_generator_folded_tb;
 
+`include "fixed_point_arith.vh"
 `include "vector_arith.vh"
-
 
 
   parameter H_BITS = 9;
